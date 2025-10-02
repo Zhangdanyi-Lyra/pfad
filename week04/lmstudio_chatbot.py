@@ -4,7 +4,7 @@ from openai import OpenAI
 # Point to the local server
 client = OpenAI(base_url="http://127.0.0.1:1234/v1", api_key="lm-studio")
 st.title("💬 Chatbot")
-st.caption("🚀 A Streamlit chatbot powered by Ollama")
+st.caption("🚀 A Streamlit chatbot powered by LMStudio")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
@@ -18,7 +18,7 @@ if prompt := st.chat_input():
     st.chat_message("user").write(prompt)
     
     response = client.chat.completions.create(
-        model="lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF",
+        model="qwen/qwen3-4b-2507",
         messages=st.session_state.messages,
         stream=True,
     )
