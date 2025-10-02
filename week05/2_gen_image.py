@@ -6,14 +6,16 @@ import torch
 model = "runwayml/stable-diffusion-v1-5"
 
 # Load the model and move it to the GPU if available
-# torch_dtype=torch.float16 is optional, but helps with performance and memory usage
-# remove torch_dtype=torch.float16 if you want to run on CPU only
-pipe = DiffusionPipeline.from_pretrained(model, torch_dtype=torch.float16)
+# For Apple Silicon Mac, use float32 instead of float16 for better compatibility
+if torch.backends.mps.is_available():
+    pipe = DiffusionPipeline.from_pretrained(model, torch_dtype=torch.float32)
+    device = "mps"
+else:
+    pipe = DiffusionPipeline.from_pretrained(model, torch_dtype=torch.float16)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# change to mps if on Mac with Apple Silicon, for example:
-# device = "mps" if torch.backends.mps.is_available() else "cpu"
-# pipe.to(device)
-pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+pipe.to(device)
 
 while True:
     prompt = input("Type a prompt and press enter to generate an image:\n>>> ")

@@ -19,4 +19,3 @@ image = image[:, :, None]
 image = np.concatenate([image, image, image], axis=2)
 canny_image = Image.fromarray(image)
 canny_image.show()
-image.show()

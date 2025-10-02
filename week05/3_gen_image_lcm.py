@@ -2,8 +2,18 @@ from diffusers import AutoPipelineForText2Image, LCMScheduler
 import torch
 
 model = 'lykon/dreamshaper-8-lcm'
-pipe = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=torch.float16)
-pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+
+# For Apple Silicon Mac, use float32 and MPS device
+if torch.backends.mps.is_available():
+    pipe = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=torch.float32)
+    device = "mps"
+    print("Using Apple Silicon MPS device")
+else:
+    pipe = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=torch.float16)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+
+pipe.to(device)
 pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)
 
 while True:

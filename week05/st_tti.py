@@ -4,9 +4,10 @@ import torch
 
 if "pipeline" not in st.session_state:
     model = "runwayml/stable-diffusion-v1-5"
-    st.session_state["pipeline"] = DiffusionPipeline.from_pretrained(model, torch_dtype=torch.float16)
+    st.session_state["pipeline"] = DiffusionPipeline.from_pretrained(model, torch_dtype=torch.float32)
     # change to mps if on Mac with Apple Silicon
-    st.session_state["pipeline"].to("cuda" if torch.cuda.is_available() else "cpu")
+    device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
+    st.session_state["pipeline"].to(device)
 
 if prompt := st.text_input("Prompt"):
     with st.spinner("Generating..."):

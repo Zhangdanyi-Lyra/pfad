@@ -4,8 +4,9 @@ from diffusers import AutoPipelineForText2Image, LCMScheduler
 
 if "pipeline" not in st.session_state:
     model = 'lykon/dreamshaper-8-lcm'
-    pipe = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=torch.float16)
-    pipe.to("cuda" if torch.cuda.is_available() else "cpu")
+    pipe = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=torch.float32)
+    device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
+    pipe.to(device)
     pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)
     st.session_state["pipeline"] = pipe
 
