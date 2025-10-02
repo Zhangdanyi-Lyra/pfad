@@ -1,3 +1,9 @@
 numpy
 matplotlib
 pandas
+requests
+streamlit
+pydeck
+duckdb
+plotly
+pillow

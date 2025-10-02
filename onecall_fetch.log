@@ -1,0 +1,38 @@
+2025-09-18 23:25:11,068 WARNING Beijing attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:12,211 WARNING Beijing attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:14,366 WARNING Beijing attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:25:18,371 ERROR Beijing failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:25:18,373 INFO Beijing hourly=0 daily=0
+2025-09-18 23:25:19,529 WARNING Shanghai attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:20,688 WARNING Shanghai attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:22,849 WARNING Shanghai attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:25:26,850 ERROR Shanghai failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:25:26,851 INFO Shanghai hourly=0 daily=0
+2025-09-18 23:25:28,018 WARNING Tokyo attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:29,168 WARNING Tokyo attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:31,318 WARNING Tokyo attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:25:35,323 ERROR Tokyo failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:25:35,324 INFO Tokyo hourly=0 daily=0
+2025-09-18 23:25:36,448 WARNING Paris attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:37,609 WARNING Paris attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:39,768 WARNING Paris attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:25:43,774 ERROR Paris failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:25:43,775 INFO Paris hourly=0 daily=0
+2025-09-18 23:25:44,929 WARNING London attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:46,098 WARNING London attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:48,255 WARNING London attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:25:52,256 ERROR London failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:25:52,257 INFO London hourly=0 daily=0
+2025-09-18 23:25:53,409 WARNING New York attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-18 23:25:54,587 WARNING New York attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-18 23:25:56,733 WARNING New York attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-18 23:26:00,738 ERROR New York failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-18 23:26:00,740 INFO New York hourly=0 daily=0
+2025-09-18 23:26:01,746 WARNING duckdb 不可用，跳过写入数据库（仅输出 CSV）
+2025-09-18 23:26:01,746 INFO Saved hourly:0 daily:0 rows
+2025-09-19 01:23:33,934 WARNING Beijing attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s
+2025-09-19 01:23:35,138 WARNING Beijing attempt 2 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 2s
+2025-09-19 01:23:37,320 WARNING Beijing attempt 3 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 4s
+2025-09-19 01:23:41,322 ERROR Beijing failed after retries: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla
+2025-09-19 01:23:41,323 INFO Beijing hourly=0 daily=0
+2025-09-19 01:23:42,520 WARNING Shanghai attempt 1 failed: status=401 body={"cod":401, "message": "Please note that using One Call 3.0 requires a separate subscription to the One Call by Call pla; wait 1s

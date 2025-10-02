@@ -1,3 +1,34 @@
+# --- Mandelbrot set 动画 ---
+def mandelbrot_animation():
+    import matplotlib.pyplot as plt
+    import matplotlib.animation as animation
+    import numpy as np
+    fig, ax = plt.subplots(figsize=(8,8))
+    ax.axis('off')
+    def mandelbrot(xmin, xmax, ymin, ymax, width, height, max_iter):
+        x = np.linspace(xmin, xmax, width)
+        y = np.linspace(ymin, ymax, height)
+        X, Y = np.meshgrid(x, y)
+        C = X + 1j * Y
+        Z = np.zeros_like(C)
+        img = np.zeros(C.shape, dtype=float)
+        for i in range(max_iter):
+            mask = np.abs(Z) <= 2
+            Z[mask] = Z[mask] ** 2 + C[mask]
+            img[mask & (img==0)] = i
+        img[img==0] = max_iter
+        return img
+    ims = []
+    # 动画参数：逐步缩放到细节区域
+    zooms = np.linspace(1, 0.1, 60)
+    for z in zooms:
+        xmin, xmax = -2*z, 1.2*z
+        ymin, ymax = -1.5*z, 1.5*z
+        img = mandelbrot(xmin, xmax, ymin, ymax, 400, 400, 50)
+        im = ax.imshow(img, cmap='twilight', extent=[xmin, xmax, ymin, ymax], animated=True)
+        ims.append([im])
+    ani = animation.ArtistAnimation(fig, ims, interval=100, blit=True, repeat_delay=1000)
+    plt.show()
 # --- 分形神经元/树状动画粒子系统 ---
 
 import matplotlib.pyplot as plt
@@ -75,4 +106,9 @@ def animate_neuron_tree():
 
 # --- 主程序 ---
 if __name__ == '__main__':
-    animate_neuron_tree()
+    print("请选择模式：1-分形神经元动画  2-Mandelbrot set 动画")
+    mode = input("输入1或2：").strip()
+    if mode == '2':
+        mandelbrot_animation()
+    else:
+        animate_neuron_tree()
